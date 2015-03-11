@@ -1,0 +1,51 @@
+<section>
+
+  <div class="row">
+    <div class="col-xs-12 app-title text-center">
+      <h2>github repos of {{user}}</h2>
+    </div>
+  </div>
+
+  <div class="repos">
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="list-unstyled row">
+          <li ng-repeat="repo in repos track by $index"
+              class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+            <a class="repo" ng-href="{repo.html_url}">
+              <h4 ng-bind="repo.full_name"></h4>
+
+              <p ng-bind="repo.description" class="description"></p>
+
+              <div class="row">
+                <div class="col-xs-3">
+                  <i class="glyphicon glyphicon-transfer"></i>
+                  <span ng-bind="repo.forks_count"></span>
+                </div>
+                <div class="col-xs-3">
+                  <i class="glyphicon glyphicon-exclamation-sign"></i>
+                  <span ng-bind="repo.open_issues_count"></span>
+                </div>
+                <div class="col-xs-3">
+                  <i class="glyphicon glyphicon-eye-open"></i>
+                  <span ng-bind="repo.watchers_count"></span>
+                </div>
+                <div class="col-xs-3">
+                  <i class="glyphicon glyphicon-sunglasses"></i>
+                  <span ng-bind="repo.language"></span>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert alert-danger text-center" role="alert" ng-show="errorMessage">
+    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+    <span class="sr-only">Error:</span>
+    {{errorMessage}}
+  </div>
+
+</section>

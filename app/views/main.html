@@ -1,0 +1,32 @@
+<section>
+
+  <div class="row">
+    <div class="col-xs-12 app-title text-center">
+      <h1>Get repos from any user</h1>
+    </div>
+  </div>
+
+  <div class="intro">
+    <div class="row">
+      <div class="col-sx-12 col-md-6 col-md-offset-3">
+        <form novalidate
+              class="horizontal-form"
+              ng-submit="setUserToUrl(user)">
+          <div>
+            <div class="input-group">
+              <input type="text"
+                     ng-model="user"
+                     class="form-control"
+                     placeholder="Add user name you want to see"/>
+                <span class="input-group-btn">
+                  <button class="btn btn-primary"
+                          type="submit">Go!
+                  </button>
+                </span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
