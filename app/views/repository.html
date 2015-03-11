@@ -12,7 +12,7 @@
         <ul class="list-unstyled row">
           <li ng-repeat="repo in repos track by $index"
               class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-            <a class="repo" ng-href="{repo.html_url}">
+            <a class="repo" ng-href="{{repo.html_url}}">
               <h4 ng-bind="repo.full_name"></h4>
 
               <p ng-bind="repo.description" class="description"></p>
